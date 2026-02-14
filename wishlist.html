@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Wishlist | Jewels & Time</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/wishlist.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">JEWELS & TIME</div>
+  <a class="back-btn" href="index.html">← Back to Shop</a>
+</header>
+
+<section class="wishlist-hero">
+  <h1>Share your Wishlist with us</h1>
+</section>
+
+<section class="wishlist-container">
+
+  <div class="wishlist-items" id="wishlist-items">
+    <!-- Filled by JS -->
+  </div>
+
+  <!-- FORM (FORMPREE READY) -->
+  <form
+    class="wishlist-form"
+    action="https://formspree.io/f/YOUR_FORM_ID"
+    method="POST"
+  >
+    <input type="hidden" name="wishlist" id="wishlist-input" />
+
+    <h2>Customer Information</h2>
+
+    <input name="firstName" placeholder="First Name *" required />
+    <input name="lastName" placeholder="Last Name *" required />
+    <input name="email" type="email" placeholder="Email *" required />
+    <input name="phone" placeholder="Phone (optional)" />
+
+    <textarea
+      name="notes"
+      placeholder="Any travel plans or additional details?"
+      rows="4"
+    ></textarea>
+
+    <p class="no-obligation">
+      No payment required. One of our Jewelry Experts will contact you
+      personally to review your wishlist.
+    </p>
+
+    <button type="submit">SEND YOUR WISHLIST</button>
+  </form>
+
+</section>
+
+</body>
+</html>
