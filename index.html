@@ -2,250 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Shop Now | Jewels & Time</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luxury Jewelry – Wishlist Experience</title>
 
-  <style>
-    :root {
-      --primary: #2f9ad6;
-      --accent: #f5a623;
-      --dark: #1f1f1f;
-      --muted: #6f6f6f;
-      --bg: #f6f8fa;
-      --card: #ffffff;
-    }
-
-    * { box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-    body { margin: 0; background: var(--bg); color: var(--dark); }
-
-    header {
-      background: white;
-      border-bottom: 1px solid #eee;
-      padding: 18px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    header h1 { margin: 0; font-size: 20px; letter-spacing: 1px; }
-
-    .wishlist-icon {
-      position: relative;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .wishlist-count {
-      position: absolute;
-      top: -6px;
-      right: -10px;
-      background: var(--accent);
-      color: white;
-      font-size: 12px;
-      border-radius: 50%;
-      padding: 2px 6px;
-    }
-
-    .hero {
-      background: white;
-      padding: 70px 20px 40px;
-      text-align: center;
-    }
-
-    .hero h2 { font-size: 40px; margin-bottom: 10px; color: var(--primary); }
-    .hero p { max-width: 720px; margin: auto; color: var(--muted); font-size: 15px; }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 30px;
-      padding: 50px;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-      transition: transform .25s ease, box-shadow .25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-    }
-
-    .card img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-    }
-
-    .card-body { padding: 18px; }
-    .card-body h3 { margin: 0 0 6px; font-size: 17px; }
-    .price { color: var(--primary); font-weight: 600; font-size: 14px; }
-
-    .btn {
-      margin-top: 14px;
-      width: 100%;
-      padding: 11px;
-      border: none;
-      background: var(--primary);
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 14px;
-      transition: background .2s;
-    }
-
-    .btn:hover { background: #1d7fb8; }
-
-    .drawer {
-      position: fixed;
-      top: 0;
-      right: -420px;
-      width: 400px;
-      height: 100vh;
-      background: white;
-      box-shadow: -10px 0 30px rgba(0,0,0,0.18);
-      padding: 20px;
-      transition: right .35s ease;
-      z-index: 1000;
-      overflow-y: auto;
-    }
-
-    .drawer.open { right: 0; }
-
-    .drawer h3 {
-      margin-top: 0;
-      font-size: 22px;
-      color: var(--primary);
-    }
-
-    .wishlist-item {
-      border-bottom: 1px solid #eee;
-      padding: 10px 0;
-      font-size: 14px;
-    }
-
-    .checkout {
-      margin-top: 20px;
-      background: #f1f7fb;
-      padding: 20px;
-      border-radius: 12px;
-    }
-
-    .checkout h4 { margin-top: 0; }
-
-    .checkout input, .checkout textarea {
-      width: 100%;
-      margin-bottom: 10px;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
-
-    .submit {
-      background: var(--accent);
-      color: white;
-      border: none;
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 15px;
-    }
-
-    .submit:hover { background: #d68f1d; }
-  </style>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/wishlist.js"></script>
 </head>
 <body>
 
-<header>
-  <h1>JEWELS & TIME</h1>
-  <div class="wishlist-icon" onclick="toggleDrawer()">Wishlist
-    <span class="wishlist-count" id="count">0</span>
-  </div>
+<header class="header">
+  <div class="logo">JEWELS & TIME</div>
+
+  <a class="wishlist-btn" href="wishlist.html">
+    Wishlist <span id="wishlist-count">0</span>
+  </a>
 </header>
 
 <section class="hero">
-  <h2>Shop Now</h2>
-  <p>Browse our live inventory and add pieces you love to your wishlist. Submit it with no obligation — our jewelry experts will personally contact you to assist with next steps.</p>
+  <h1>Shop Now</h1>
+  <p>
+    Browse our live inventory and add pieces you love to your wishlist.
+    No obligation to buy — our jewelry experts will contact you personally.
+  </p>
 </section>
 
-<section class="products">
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e" />
-    <div class="card-body">
-      <h3>Tacori Diamond Ring</h3>
-      <div class="price">Inquire for pricing</div>
-      <button class="btn" onclick="addItem('Tacori Diamond Ring')">Add to Wishlist</button>
-    </div>
+<section class="product-grid">
+
+  <!-- PRODUCT CARD -->
+  <div class="product-card">
+    <img src="images/products/watches/Anya.jpg" alt="Jewelry" />
+    <h3>Tacori Diamond Ring</h3>
+    <p class="price">Inquire for pricing</p>
+    <button onclick="addToWishlist('Tacori Diamond Ring')">Add to Wishlist</button>
   </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f" />
-    <div class="card-body">
-      <h3>Bridal Engagement Ring</h3>
-      <div class="price">Inquire for pricing</div>
-      <button class="btn" onclick="addItem('Bridal Engagement Ring')">Add to Wishlist</button>
-    </div>
+  <!-- DUPLICATE THESE -->
+  <div class="product-card">
+    <img src="images/products/watches/Anya.jpg" />
+    <h3>Bridal Engagement Ring</h3>
+    <p class="price">Inquire for pricing</p>
+    <button onclick="addToWishlist('Bridal Engagement Ring')">Add to Wishlist</button>
   </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" />
-    <div class="card-body">
-      <h3>Natural Diamond Necklace</h3>
-      <div class="price">Inquire for pricing</div>
-      <button class="btn" onclick="addItem('Natural Diamond Necklace')">Add to Wishlist</button>
-    </div>
+  <div class="product-card">
+    <img src="images/products/watches/Anya.jpg" />
+    <h3>Natural Diamond Necklace</h3>
+    <p class="price">Inquire for pricing</p>
+    <button onclick="addToWishlist('Natural Diamond Necklace')">Add to Wishlist</button>
   </div>
+
+  <div class="product-card">
+    <img src="images/products/watches/Anya.jpg" />
+    <h3>Tanzanite Collection Ring</h3>
+    <p class="price">Inquire for pricing</p>
+    <button onclick="addToWishlist('Tanzanite Collection Ring')">Add to Wishlist</button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/products/watches/Anya.jpg" />
+    <h3>Luxury Diamond Studs</h3>
+    <p class="price">Inquire for pricing</p>
+    <button onclick="addToWishlist('Luxury Diamond Studs')">Add to Wishlist</button>
+  </div>
+
 </section>
-
-<div class="drawer" id="drawer">
-  <h3>Your Wishlist</h3>
-  <div id="wishlist"></div>
-
-  <div class="checkout">
-    <h4>Share your Wishlist</h4>
-    <input placeholder="First Name" />
-    <input placeholder="Last Name" />
-    <input placeholder="Email" />
-    <input placeholder="Phone (optional)" />
-    <textarea rows="3" placeholder="Any notes or travel plans?"></textarea>
-    <button class="submit">Send Wishlist</button>
-    <p style="font-size:12px;color:#555;margin-top:10px">No payment required. A jewelry expert will contact you personally.</p>
-  </div>
-</div>
-
-<script>
-  const drawer = document.getElementById('drawer');
-  const wishlistDiv = document.getElementById('wishlist');
-  const count = document.getElementById('count');
-  let wishlist = [];
-
-  function toggleDrawer() {
-    drawer.classList.toggle('open');
-  }
-
-  function addItem(name) {
-    wishlist.push(name);
-    renderWishlist();
-    drawer.classList.add('open');
-  }
-
-  function renderWishlist() {
-    wishlistDiv.innerHTML = '';
-    wishlist.forEach(item => {
-      const div = document.createElement('div');
-      div.className = 'wishlist-item';
-      div.textContent = item;
-      wishlistDiv.appendChild(div);
-    });
-    count.textContent = wishlist.length;
-  }
-</script>
 
 </body>
 </html>
