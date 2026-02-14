@@ -1,0 +1,79 @@
+/* =========================
+   CATEGORY HERO
+========================= */
+
+.category-hero {
+  max-width: 900px;
+  margin: 80px auto 60px;
+  text-align: center;
+}
+
+.category-hero h1 {
+  font-size: 40px;
+  color: #1c2b55;
+  margin-bottom: 10px;
+}
+
+.category-hero p {
+  font-size: 16px;
+  color: #6b7bbd;
+}
+
+/* =========================
+   CATEGORY SECTION
+========================= */
+
+.category-section {
+  max-width: 1200px;
+  margin: 0 auto 120px;
+  padding: 0 40px;
+}
+
+/* PRODUCT CARD */
+
+.product-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.14);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin: 20px 0 10px;
+  font-size: 17px;
+  color: #1c2b55;
+  letter-spacing: 0.05em;
+}
+
+/* WISHLIST BUTTON */
+
+.product-card button {
+  margin-bottom: 22px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #ff8a00, #ff5f00);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(255, 120, 0, 0.4);
+}
