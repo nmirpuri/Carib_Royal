@@ -2,70 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Shop Now | Jewels & Time</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link rel="stylesheet" href="css/styles.css" />
-  <script defer src="js/wishlist.js"></script>
+  <title>Luxury Jewelry Boutique</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<header class="header">
-  <div class="logo">JEWELS & TIME</div>
+  <!-- HEADER -->
+  <header>
+    <div class="navbar">
+      <div class="logo">LUXE</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop Now</a>
+        <a href="support.html">Customer Service</a>
+        <a href="about.html">About Us</a>
+        <a href="wishlist.html">Wishlist</a>
+      </nav>
+    </div>
+  </header>
 
-  <a class="wishlist-btn" href="wishlist.html">
-    Wishlist <span id="wishlist-count">0</span>
-  </a>
-</header>
+  <!-- HERO SECTION -->
+  <div class="container">
+    <h1 class="page-title">Timeless Luxury, Curated for You</h1>
+    <p class="page-subtitle">
+      Explore premium jewelry and watches. Add items to your wishlist and we’ll personally assist you with checkout.
+    </p>
 
-<section class="hero">
-  <h1>Shop Now</h1>
-  <p>
-    Browse our live inventory and add pieces you love to your wishlist.
-    No obligation to buy — our jewelry experts will contact you personally.
-  </p>
-</section>
-
-<section class="product-grid">
-
-  <!-- PRODUCT CARD -->
-  <div class="product-card">
-    <img src="images/products/watches/Anya.jpg" alt="Jewelry" />
-    <h3>Tacori Diamond Ring</h3>
-    <p class="price">Inquire for pricing</p>
-    <button onclick="addToWishlist('Tacori Diamond Ring')">Add to Wishlist</button>
+    <a href="shop.html" class="btn">Shop Now</a>
   </div>
 
-  <!-- DUPLICATE THESE -->
-  <div class="product-card">
-    <img src="images/products/watches/Anya.jpg" />
-    <h3>Bridal Engagement Ring</h3>
-    <p class="price">Inquire for pricing</p>
-    <button onclick="addToWishlist('Bridal Engagement Ring')">Add to Wishlist</button>
+  <!-- FEATURED PRODUCTS -->
+  <div class="container">
+    <h2 class="page-title">Featured Collections</h2>
+    <p class="page-subtitle">Discover our most popular selections</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <img src="images/products/watches/Anya.jpg" alt="Watches">
+        <div class="card-body">
+          <div class="card-title">Luxury Watches</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/products/watches/Anya.jpg" alt="Earrings">
+        <div class="card-body">
+          <div class="card-title">Elegant Earrings</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/products/watches/Anya.jpg" alt="Necklaces">
+        <div class="card-body">
+          <div class="card-title">Statement Necklaces</div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="product-card">
-    <img src="images/products/watches/Anya.jpg" />
-    <h3>Natural Diamond Necklace</h3>
-    <p class="price">Inquire for pricing</p>
-    <button onclick="addToWishlist('Natural Diamond Necklace')">Add to Wishlist</button>
-  </div>
-
-  <div class="product-card">
-    <img src="images/products/watches/Anya.jpg" />
-    <h3>Tanzanite Collection Ring</h3>
-    <p class="price">Inquire for pricing</p>
-    <button onclick="addToWishlist('Tanzanite Collection Ring')">Add to Wishlist</button>
-  </div>
-
-  <div class="product-card">
-    <img src="images/products/watches/Anya.jpg" />
-    <h3>Luxury Diamond Studs</h3>
-    <p class="price">Inquire for pricing</p>
-    <button onclick="addToWishlist('Luxury Diamond Studs')">Add to Wishlist</button>
-  </div>
-
-</section>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Luxe Jewelry Boutique. All rights reserved.
+  </footer>
 
 </body>
 </html>
